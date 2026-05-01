@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namratha Jeetendra</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #fff;
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 80px 40px 120px;
+  }
+
+  /* Header */
+  .header { margin-bottom: 48px; }
+  .header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+  }
+  .header .tagline {
+    font-size: 1rem;
+    color: #6b6b6b;
+    margin-bottom: 20px;
+  }
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .badge {
+    font-size: 0.78rem;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: #f1f1f0;
+    color: #444;
+    font-weight: 500;
+  }
+  .badge.green { background: #eefbf1; color: #1e7e34; }
+  .links { display: flex; gap: 16px; flex-wrap: wrap; }
+  .links a {
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    display: flex; align-items: center; gap: 5px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1px;
+    transition: border-color 0.15s;
+  }
+  .links a:hover { border-color: #1a1a1a; }
+
+  /* Divider */
+  hr { border: none; border-top: 1px solid #e8e8e8; margin: 36px 0; }
+
+  /* Section */
+  .section { margin-bottom: 40px; }
+  .section-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9b9b9b;
+    margin-bottom: 16px;
+  }
+
+  /* About */
+  .about p { color: #3a3a3a; font-size: 0.97rem; margin-bottom: 10px; }
+
+  /* Projects */
+  .project {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .project:last-child { border-bottom: none; }
+  .project-emoji { font-size: 1.1rem; margin-top: 2px; flex-shrink: 0; }
+  .project-body { flex: 1; }
+  .project-top { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .project-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+  .project-name:hover { text-decoration: underline; }
+  .project-status {
+    font-size: 0.72rem;
+    padding: 2px 7px;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+  .status-live { background: #eefbf1; color: #1e7e34; }
+  .status-wip { background: #fff8e6; color: #b45309; }
+  .status-research { background: #f0eeff; color: #5b21b6; }
+  .project-desc { font-size: 0.88rem; color: #6b6b6b; margin-top: 3px; }
+  .project-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+  .tag {
+    font-size: 0.72rem;
+    padding: 2px 7px;
+    background: #f1f1f0;
+    border-radius: 3px;
+    color: #555;
+    font-weight: 500;
+  }
+
+  /* Skills */
+  .skill-row { margin-bottom: 14px; }
+  .skill-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #9b9b9b;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .skill-tag {
+    font-size: 0.82rem;
+    padding: 3px 10px;
+    background: #f1f1f0;
+    border-radius: 4px;
+    color: #333;
+    font-weight: 400;
+  }
+
+  /* Contact */
+  .contact-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.92rem;
+  }
+  .contact-row:last-child { border-bottom: none; }
+  .contact-icon { font-size: 1rem; width: 24px; text-align: center; flex-shrink: 0; }
+  .contact-row a { color: #1a1a1a; text-decoration: none; border-bottom: 1px solid #ddd; }
+  .contact-row a:hover { border-color: #1a1a1a; }
+  .contact-label { color: #9b9b9b; font-size: 0.8rem; margin-left: auto; }
+
+  /* Footer */
+  .footer { margin-top: 60px; font-size: 0.8rem; color: #c0c0c0; }
+
+  @media (max-width: 600px) {
+    .page { padding: 48px 24px 80px; }
+    .header h1 { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Namratha Jeetendra 👋</h1>
+    <p class="tagline">M.S. Data Science · University of Maryland, College Park · 2027</p>
+    <div class="badges">
+      <span class="badge green">✦ Open to Summer 2026 Internships</span>
+      <span class="badge">Product Analytics</span>
+      <span class="badge">Data Analytics</span>
+      <span class="badge">Data Science</span>
+    </div>
+    <div class="links">
+      <a href="https://linkedin.com/in/namratha-jeetendra-791710227" target="_blank">💼 LinkedIn</a>
+      <a href="https://github.com/namrathajeetendra" target="_blank">🐙 GitHub</a>
+      <a href="mailto:namrath4@umd.edu">✉️ Email</a>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- About -->
+  <div class="section about">
+    <div class="section-title">About</div>
+    <p>I work at the intersection of product and data — understanding user behavior, building dashboards that drive real decisions, and translating messy data into clear stories.</p>
+    <p>Previously at <strong>Celonis</strong> doing process mining and KPI analytics. B.Tech in Computer Science with AI/ML specialization from SRM Institute of Science & Technology, Chennai.</p>
+    <p>🌴 From Chennai · 📍 Based in College Park, MD</p>
+  </div>
+
+  <hr>
+
+  <!-- Projects -->
+  <div class="section">
+    <div class="section-title">Projects</div>
+
+    <div class="project">
+      <div class="project-emoji">📊</div>
+      <div class="project-body">
+        <div class="project-top">
+          <a href="https://sql-sales-dashboard.streamlit.app" class="project-name" target="_blank">Superstore Sales Dashboard ↗</a>
+          <span class="project-status status-live">Live</span>
+        </div>
+        <div class="project-desc">End-to-end retail analytics — revenue trends, profit margins & regional breakdowns.</div>
+        <div class="project-tags">
+          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Streamlit</span><span class="tag">Pandas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-emoji">🎵</div>
+      <div class="project-body">
+        <div class="project-top">
+          <a href="https://spotify-audio-dna.streamlit.app" class="project-name" target="_blank">Spotify Audio DNA ↗</a>
+          <span class="project-status status-live">Live</span>
+        </div>
+        <div class="project-desc">Analyzes listening behavior and clusters tracks by audio profile to surface patterns in your music taste.</div>
+        <div class="project-tags">
+          <span class="tag">Python</span><span class="tag">Spotify API</span><span class="tag">Scikit-learn</span><span class="tag">Streamlit</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-emoji">🚗</div>
+      <div class="project-body">
+        <div class="project-top">
+          <span class="project-name">RideIQ</span>
+          <span class="project-status status-wip">In Progress</span>
+        </div>
+        <div class="project-desc">Ride-share analytics dashboard — pricing patterns, demand surges & rider behavior.</div>
+        <div class="project-tags">
+          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Streamlit</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-emoji">🧠</div>
+      <div class="project-body">
+        <div class="project-top">
+          <a href="https://github.com/namrathajeetendra" class="project-name" target="_blank">Multilingual Sarcasm Detection ↗</a>
+          <span class="project-status status-research">Research</span>
+        </div>
+        <div class="project-desc">Fine-tuned Indic-BERT on Tamil-English code-mixed social media data for sentiment & sarcasm detection. Undergraduate thesis.</div>
+        <div class="project-tags">
+          <span class="tag">HuggingFace</span><span class="tag">PyTorch</span><span class="tag">Indic-BERT</span><span class="tag">Tamil NLP</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-emoji">💡</div>
+      <div class="project-body">
+        <div class="project-top">
+          <a href="https://github.com/namrathajeetendra" class="project-name" target="_blank">EmoTrac ↗</a>
+          <span class="project-status status-research">Research</span>
+        </div>
+        <div class="project-desc">Emotion trigger detection using CNN + BERT hybrid architecture. 95% accuracy.</div>
+        <div class="project-tags">
+          <span class="tag">TensorFlow</span><span class="tag">BERT</span><span class="tag">CNN</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <!-- Skills -->
+  <div class="section">
+    <div class="section-title">Skills</div>
+
+    <div class="skill-row">
+      <div class="skill-label">Languages</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">R</span>
+        <span class="skill-tag">Java</span>
+      </div>
+    </div>
+
+    <div class="skill-row">
+      <div class="skill-label">Data & Analytics</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Pandas</span>
+        <span class="skill-tag">NumPy</span>
+        <span class="skill-tag">Matplotlib</span>
+        <span class="skill-tag">Seaborn</span>
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">Streamlit</span>
+        <span class="skill-tag">Excel</span>
+      </div>
+    </div>
+
+    <div class="skill-row">
+      <div class="skill-label">Machine Learning</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Scikit-learn</span>
+        <span class="skill-tag">PyTorch</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">HuggingFace</span>
+        <span class="skill-tag">PyMC</span>
+        <span class="skill-tag">NLTK</span>
+        <span class="skill-tag">SpaCy</span>
+      </div>
+    </div>
+
+    <div class="skill-row">
+      <div class="skill-label">Databases & Tools</div>
+      <div class="skill-tags">
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">GitHub</span>
+        <span class="skill-tag">VS Code</span>
+        <span class="skill-tag">Anaconda</span>
+        <span class="skill-tag">Jupyter</span>
+        <span class="skill-tag">Google Colab</span>
+      </div>
+    </div>
+
+    <div class="skill-row">
+      <div class="skill-label">Industry Tools</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Celonis</span>
+        <span class="skill-tag">SonarQube</span>
+      </div>
+    </div>
+
+    <div class="skill-row">
+      <div class="skill-label">Concepts</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Machine Learning</span>
+        <span class="skill-tag">NLP</span>
+        <span class="skill-tag">Deep Learning</span>
+        <span class="skill-tag">Bayesian Statistics</span>
+        <span class="skill-tag">Process Mining</span>
+        <span class="skill-tag">EDA</span>
+        <span class="skill-tag">PCA</span>
+        <span class="skill-tag">kNN</span>
+        <span class="skill-tag">SVM</span>
+        <span class="skill-tag">Classification</span>
+        <span class="skill-tag">Clustering</span>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Contact -->
+  <div class="section">
+    <div class="section-title">Contact</div>
+    <div class="contact-row">
+      <span class="contact-icon">✉️</span>
+      <a href="mailto:namrath4@umd.edu">namrath4@umd.edu</a>
+      <span class="contact-label">UMD email</span>
+    </div>
+    <div class="contact-row">
+      <span class="contact-icon">💼</span>
+      <a href="https://linkedin.com/in/namratha-jeetendra-791710227" target="_blank">linkedin.com/in/namratha-jeetendra-791710227</a>
+    </div>
+    <div class="contact-row">
+      <span class="contact-icon">🐙</span>
+      <a href="https://github.com/namrathajeetendra" target="_blank">github.com/namrathajeetendra</a>
+    </div>
+  </div>
+
+  <div class="footer">Last updated May 2026 · Built with ❤️ and plain HTML</div>
+
+</div>
+</body>
+</html>
